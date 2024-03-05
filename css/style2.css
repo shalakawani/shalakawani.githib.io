@@ -1,0 +1,446 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #273444; /* Dark slate color for text */
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+/* Header and Navigation styling */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #273444; /* Dark slate color for links */
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Bright blue for hover state */
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Choose a font that matches your site's aesthetic */
+    color: #007bff; /* A nice, vibrant color for headers */
+    text-align: center; /* Centers the header text */
+    margin-bottom: 20px; /* Adds some space below the header */
+    padding-bottom: 10px; /* Adds some space at the bottom inside the header */
+    border-bottom: 2px solid #007bff; /* Adds a line under the header for emphasis */
+    font-size: 24px; /* Adjust the size as needed */
+    font-weight: bold; /* Makes the header text bold */
+}
+
+/* Hero section adjustments */
+#hero {
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    color: black;
+    padding: 20px 0;
+}
+
+.hero-description {
+    width: 100%; /* Ensures it takes full width */
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds space above */
+    order: 3; /* Makes sure it comes after the flex items in .text-container */
+}
+
+#hero img {
+    width: 300px; /* Adjusted to match your HTML */
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#hero .text-container {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Centers items vertically if there's space */
+    align-items: center; /* Aligns items to the start (left) */
+    padding-left: 20px; /* Adds some space between the image and text */
+}
+
+.hero-content-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: center; /* Centers the items horizontally */
+    flex-wrap: wrap; /* Allows items to wrap if necessary */
+}
+
+
+#hero .text-container hr {
+    margin: 20px auto; /* Adjusts the margin around the <hr> */
+    width: 80%; /* Adjust the width as per your design */
+    border: 0; /* Removes default border */
+    height: 1px; /* Sets the height of the line */
+    background-color: #000; /* Sets the line color to black or any color of choice */
+}
+
+.hero-description {
+    width: 100%; /* Ensures it takes full width */
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds space above */
+    margin-left:80px;
+    margin-right: 80px;
+    order: 3; /* Makes sure it comes after the flex items in .text-container */
+}
+
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the start */
+    gap: 10px; /* Adjust based on your spacing preference */
+}
+
+#hero .name, #hero .title {
+    align-self: center;
+    display: block; /* This ensures that the name and title each take up their own line */
+}
+
+#hero .name {
+    font-size: 60px; /* Larger font size for the name */
+    margin-top: 0.8em; /* Adds some space above the horizontal line */
+}
+
+#hero .title {
+    font-size: 24px; /* Smaller font size for the title/description */
+    margin-bottom: 1.0em; /* Adds some space below the horizontal line */
+}
+
+#hero hr {
+    border: 0; /* Removes the default border */
+    height: 1px; /* Sets the height of the line */
+    background-color: #000; /* Sets the line color to black */
+    margin: 10px 0; /* Adds some vertical spacing around the line */
+}
+
+.text-container .buttons-container {
+    display: flex;
+    justify-content: center; /* Center-align buttons horizontally */
+    flex-wrap: wrap; /* Allows buttons to wrap in small screens */
+    gap: 10px; /* Optional: Adds space between buttons */
+}
+
+/* Circular Buttons */
+.circle-btn {
+    display: inline-block;
+    margin: 10px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: black;
+    line-height: 130px;
+    text-align: center;
+    background-color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Colors for each button */
+.certifications-btn {
+    background-color: #FFD700; /* Gold */
+    font-weight:bold;
+	
+}
+
+.experience-btn {
+    background-color: #FF4500; /* OrangeRed */
+    font-weight:bold;
+}
+
+.projects-btn {
+    background-color: #ADD8E6; /* LightBlue */
+    font-weight:bold;
+}
+
+.circle-btn:hover {
+    background-color: #0056b3;
+}
+
+.education-skills-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Adds space between the two sections */
+}
+
+#education, #skills-languages {
+    flex: 1; /* Each section takes equal width */
+    padding: 20px;
+    border-radius: 5px; /* Optional: Adds rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Ensuring content within sections is not too wide on larger screens */
+@media (max-width: 1024px) {
+    .education-skills-container {
+        flex-direction: column; /* Stack them vertically on smaller screens */
+    }
+}
+
+#about, #education, #skills-languages, #projects, #experience, #certifications, #contact {
+    background-color: #e9ecef; /* Light grey background for all sections */
+    padding: 2em; /* Uniform padding */
+    margin-bottom: 20px; /* 20px space below each section */
+}
+
+
+/* Certifications Section */
+#certifications {
+  padding: 20px; /* Add padding to the section */
+}
+
+.cert-grid {
+  display: grid; /* Switch to grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 20px; /* Space between grid items */
+  align-items: start; /* Align items to the start of the grid area */
+  padding: 20px;
+}
+
+.cert-item {
+  display: flex; /* Use flexbox for layout within each certification item */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  border: 1px solid #ddd; /* Adds a border around each certification */
+  padding: 10px; /* Padding inside each certification box */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+  background-color:#f3f4f6;
+
+}
+
+.cert-item img {
+  width: 100%; /* Image takes full width of the .cert-item */
+  max-width: 400px; /* Maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between image and text */
+  background-color:#f3f4f6;
+}
+
+.cert-item .cert-text {
+  text-align: center; /* Center-align the text */
+  width: 100%; /* Text container takes full width of the .cert-item */
+  background-color:#f3f4f6;
+}
+
+
+
+#self-learning {
+    background-color: #f0e68c; /* A light khaki background for visibility, change as desired */
+    padding: 20px;
+    text-align: center; /* Centers the text inside the section */
+    margin: 20px 0; /* Adds some space above and below the section */
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+}
+
+#self-learning p {
+    color: #273444; /* Dark slate color for text, adjust as needed */
+    font-size: 18px; /* Adjusts the font size for readability */
+    max-width: 800px; /* Restricts the maximum width of the text block */
+    margin: auto; /* Centers the text block if it's narrower than the full section */
+}
+
+/* Projects section styling adjusted for zigzag layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80%, 1fr)); /* Adjust column width */
+    justify-content: center; /* Centers the items in the grid */
+    gap: 20px; /* Adjust the gap between items as needed */
+}
+
+.project-item {
+  display: flex;
+  flex-wrap: wrap; /* Ensure that content can wrap as needed */
+  align-items: center; /* Align items vertically in the middle */
+  justify-content: center; /* Space between image and text */
+  background-color:#f3f4f6;
+  margin-bottom: 20px; /* Space between project items */
+  border: 2px solid #ddd; /* Example border */
+  padding: 20px; /* Add padding inside the border */
+  width: 90%; /* Sets the width to 80% of its container */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+.project-item:nth-child(odd) .project-text {
+  order: 1; /* Text first for odd items */
+  flex-basis: 45%; /* Adjust the width of the text block */
+}
+
+.project-item:nth-child(even) .project-text {
+  order: 2; /* Text after image for even items */
+  flex-basis: 45%; /* Adjust the width of the text block */
+}
+
+.project-item img {
+  order: 2; /* Image after text for odd items */
+  width: 400px; /* Resize image width */
+  height: 400px; /* Resize image height */
+  object-fit: cover; /* Ensure the aspect ratio is maintained */
+}
+
+.project-item:nth-child(even) img {
+  order: 1; /* Image first for even items */
+}
+
+/* Ensure text and images are properly aligned and spaced */
+.project-item .project-text {
+  padding: 0 15px; /* Add some padding around the text for better readability */
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center; /* Center-align items for a neat look */
+  }
+
+  .project-item .project-text, .project-item img {
+    order: 0; /* Reset order for mobile view */
+    flex-basis: auto; /* Reset width of text block */
+    width: 100%; /* Full width for text and images on small screens */
+    text-align: center; /* Center-align the text */
+    padding: 10px 0; /* Add padding above and below the text */
+  }
+}
+
+.project-link-btn {
+    display: inline-block; /* Allows setting padding and width */
+    padding: 10px 15px; /* Adjust padding as needed */
+    margin-top: 10px; /* Space between the description and the button */
+    background-color: #007bff; /* Example button color - blue */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Example hover effect */
+.project-link-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.experience-item {
+    background-color: #f3f4f6; /* Light grey, slightly lighter than #e9ecef */
+    border: 2px solid #ddd; /* Adds a subtle border */
+    padding: 20px; /* Padding inside each box */
+    margin-bottom: 20px; /* Space below each item */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+    width: 90%; /* Sets the width to 80% of its container */
+
+}
+
+#my-journey {
+    background-color: #f0f8ff; /* A light, attention-grabbing color */
+    padding: 40px;
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds depth */
+    text-align: center; /* Centers the text for emphasis */
+    margin: 40px 20px; /* Adds some space around the section */
+}
+
+#my-journey h2 {
+    color: #007bff; /* A vibrant color for the header */
+    margin-bottom: 20px;
+}
+
+#my-journey p {
+    font-size: 18px; /* Makes the text more readable */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.journey-btn {
+    background-color: #ff4500; /* A bold color for the button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.journey-btn:hover {
+    background-color: #c03d00; /* Darker shade for hover effect */
+}
+
+
+/* Contact section styling */
+#contact {
+    padding: 2em;
+    background-color: #fff;
+}
+
+/* Footer styling */
+footer {
+    background-color: #273444; /* Dark slate for footer background */
+    color: #f8f9fa; /* Light grey text for contrast */
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Subtle highlights and buttons */
+button, .button {
+    background-color: #007bff; /* Bright blue for buttons */
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover, .button:hover {
+    background-color: #0056b3; /* Darker blue for button hover state */
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 0.5em 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
